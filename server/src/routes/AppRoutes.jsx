@@ -9,6 +9,7 @@ import ResetPassword from "../pages/ResetPassword/ResetPassword";
 import BecomeHost from "../pages/BecomeHost/BecomeHost";
 import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import Profile from "../components/Profile/Profile.jsx";
+import AboutUs from "../pages/AboutUs/AboutUs.jsx";
 import Layout from "../Layout.jsx";
 
 const AppRoutes = () => {
@@ -19,6 +20,7 @@ const AppRoutes = () => {
           <Route index element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="/become-host" element={<BecomeHost />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password" element={<ResetPassword />} />

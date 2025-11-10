@@ -2,6 +2,7 @@ import React from "react";
 import styles from './Footer.module.css';
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
 import logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -18,7 +19,7 @@ const Footer = () => {
             Find the perfect stay in any city — comfort, luxury, and convenience all in one place.
           </p>
           <div className={styles.socialIcons}>
-            <a href="#"><Facebook size={20} /></a>
+            <Link to="#"><Facebook size={20} /></Link>
             <a href="#"><Instagram size={20} /></a>
             <a href="#"><Twitter size={20} /></a>
           </div>
@@ -28,7 +29,7 @@ const Footer = () => {
         <div className={styles.footerSection}>
           <h3 className={styles.sectionTitle}>Company</h3>
           <ul className={styles.linkList}>
-            <li><a href="#">About Us</a></li>
+            <li><Link to="/about-us">About Us</Link></li>
             <li><a href="#">Careers</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Press</a></li>
