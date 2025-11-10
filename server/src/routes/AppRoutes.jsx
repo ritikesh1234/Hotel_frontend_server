@@ -11,6 +11,7 @@ import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import Profile from "../components/Profile/Profile.jsx";
 import AboutUs from "../pages/AboutUs/AboutUs.jsx";
 import Layout from "../Layout.jsx";
+import HelpCenter from "../pages/HelpCenter/HelpCenter.jsx";
 
 const AppRoutes = () => {
   return (
@@ -21,6 +22,7 @@ const AppRoutes = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/help-center" element={<HelpCenter />} />
           <Route path="/become-host" element={<BecomeHost />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password" element={<ResetPassword />} />

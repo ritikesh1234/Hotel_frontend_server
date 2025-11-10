@@ -30,9 +30,9 @@ const Footer = () => {
           <h3 className={styles.sectionTitle}>Company</h3>
           <ul className={styles.linkList}>
             <li><Link to="/about-us">About Us</Link></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Press</a></li>
+            <li><Link to="#">Careers</Link></li>
+            <li><Link to="#">Blog</Link></li>
+            <li><Link to="#">Press</Link></li>
           </ul>
         </div>
 
@@ -40,10 +40,10 @@ const Footer = () => {
         <div className={styles.footerSection}>
           <h3 className={styles.sectionTitle}>Support</h3>
           <ul className={styles.linkList}>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Cancellation Options</a></li>
-            <li><a href="#">Neighborhood Support</a></li>
-            <li><a href="#">Trust & Safety</a></li>
+            <li><Link to="/help-center">Help Center</Link></li>
+            <li><Link to="#">Cancellation Options</Link></li>
+            <li><Link to="#">Neighborhood Support</Link></li>
+            <li><Link to="#">Trust & Safety</Link></li>
           </ul>
         </div>
 
