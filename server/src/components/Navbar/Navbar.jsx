@@ -1,10 +1,14 @@
 import React from "react";
 import styles from "./Navbar.module.css";
- import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Search, User, CalendarDays, MapPin } from "lucide-react";
 import logo from "../../assets/logo.png";
+import { useSelector,useDispatch } from "react-redux";
+import{logout,clearUser} from "../../features/authSlice";
 
 const Navbar = () => {
+  const userEmail = useSelector((state) => state.userEmail);
+  const dispatch = useDispatch();
   return (
     <header className={styles.navbar}>
       <div className={styles.container}>
@@ -44,13 +48,16 @@ const Navbar = () => {
         </div>
 
         {/* User Section */}
-        <div className={styles.userSection}>
+        { userEmail  ? <div className={styles.userSection}>
+          <Link to='/profile'><button className={styles.profileButton}>Profile</button></Link>
+          <Link to='/logout'><button  onClick={() => {dispatch(logout()); dispatch(clearUser());}} className={styles.logoutButton}>Logout</button></Link>
+        </div> : <div className={styles.userSection}>
           <Link to='/become-host'><button className={styles.hostButton}>Become a Host</button></Link>
           <Link to='/login'><button className={styles.loginButton}>
             <User size={18} />
             <span>Login</span>
           </button></Link>
-        </div>
+        </div>}
       </div>
 
       {/* Mobile Search Bar */}

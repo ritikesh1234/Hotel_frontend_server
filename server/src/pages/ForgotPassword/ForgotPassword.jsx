@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import styles from "./ForgotPassword.module.css";
 import { Link } from "react-router-dom";
+import { forgotPassword } from "../../api/forgotPassword";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email.trim()) return alert("Please enter your email!");
+    const data = await forgotPassword(email);
+    console.log("Forgot Password Response:", data);
     setSubmitted(true);
   };
 

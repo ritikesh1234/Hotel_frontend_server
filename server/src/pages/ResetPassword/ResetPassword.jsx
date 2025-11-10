@@ -1,20 +1,30 @@
 import React, { useState } from "react";
 import styles from "./ResetPassword.module.css";
+import { resetPassword } from "../../api/resetPassword";
+import { useNavigate } from "react-router-dom";
 
 const ResetPassword = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
-
     // Add API call for resetting password here
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get("token");
+    if (!token) {
+      alert("Invalid or missing token!");
+      return;
+    }
+    const data = await resetPassword(token,password);
     alert("Your password has been reset successfully!");
+    navigate("/");
   };
 
   return (
