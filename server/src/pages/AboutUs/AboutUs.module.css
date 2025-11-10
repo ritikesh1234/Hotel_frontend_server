@@ -181,6 +181,7 @@
 .teamGrid { display:flex; gap:12px; margin-top:0.75rem; flex-wrap:wrap; }
 .person { width:160px; background: linear-gradient(180deg, #fff, #fbfcff); padding:0.9rem; border-radius:14px; text-align:center; box-shadow:0 12px 30px rgba(15,23,42,0.06); }
 .avatar { width:64px; height:64px; margin:0 auto 0.6rem; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-weight:800; color:white; font-size:0.95rem; }
+.avatar0 { background: linear-gradient(90deg, #686565, #a18e8e); box-shadow: 0 8px 20px rgba(255,107,107,0.12); }
 .avatar1 { background: linear-gradient(90deg, #ff6b6b, #ff9a9a); box-shadow: 0 8px 20px rgba(255,107,107,0.12); }
 .avatar2 { background: linear-gradient(90deg, #5b9cff, #9ad1ff); box-shadow: 0 8px 20px rgba(91,156,255,0.12); }
 .avatar3 { background: linear-gradient(90deg, #7c5cff, #b79bff); box-shadow: 0 8px 20px rgba(124,92,255,0.12); }

@@ -198,6 +198,13 @@ export default function AboutUs() {
         <h2>Meet the team</h2>
         <div className={styles.teamGrid}>
           <figure className={styles.person}>
+            <div className={`${styles.avatar} ${styles.avatar0}`}>BP</div>
+            <figcaption>
+              <strong>Bhanu Pratap Singh</strong>
+              <span>Chairman</span>
+            </figcaption>
+          </figure>  
+          <figure className={styles.person}>
             <div className={`${styles.avatar} ${styles.avatar1}`}>RY</div>
             <figcaption>
               <strong>Ritikesh Yadav</strong>
