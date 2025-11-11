@@ -41,7 +41,7 @@ const Footer = () => {
           <h3 className={styles.sectionTitle}>Support</h3>
           <ul className={styles.linkList}>
             <li><Link to="/help-center">Help Center</Link></li>
-            <li><Link to="#">Cancellation Options</Link></li>
+            <li><Link to="/cancellation-options">Cancellation Options</Link></li>
             <li><Link to="#">Neighborhood Support</Link></li>
             <li><Link to="#">Trust & Safety</Link></li>
           </ul>
